@@ -1,9 +1,9 @@
 ---
 layout: post
-title: @ModelAttribute에 Multipart 적용 했을 때 파일이 첨부되지 않으면 에러나는 버그 수정
+title: ModelAttribute에 Multipart 적용 했을 때 파일이 첨부되지 않으면 에러나는 버그 수정
 tags:
   - spring boot
-  - @ModelAttribute
+  - ModelAttribute
   - Multipart
 ---
 
