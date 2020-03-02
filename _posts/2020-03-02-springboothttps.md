@@ -27,7 +27,7 @@ keytool -import -alias (Trust-Store의 별칭) -file (인증서 파일명) -keys
 
 * application.yml에 아래 코드 작성
 
-```yaml
+```python
 server:
   port: 8090 #Https port
   ssl:
