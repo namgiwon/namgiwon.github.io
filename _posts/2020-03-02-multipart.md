@@ -26,6 +26,6 @@ public Response insert(@ModelAttribute("storeDto") StoreDto storeDto) throws Exc
 ```java
 @InitBinder
 public void initBinder(WebDataBinder binder) {
-    binder.registerCustomEditor(MultipartFile.class, "MultipartFile[] uiploadingFiles",new StringTrimmerEditor(true));
+    binder.registerCustomEditor(MultipartFile.class, "[파일 필드 이름]",new StringTrimmerEditor(true));
 }
 ```
