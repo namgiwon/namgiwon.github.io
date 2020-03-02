@@ -33,9 +33,9 @@ server:
   ssl:
     enabled: true
     key-store: /home/test/keystore.jks # 키스토어 경로.
-    key-store-password: passwd  # 키스토어 암호.
-    key-password: passwd # 키 암호.
-    key-alias: mhlab # 키스토어 별칭.
+    key-store-password: nam  # 키스토어 암호.
+    key-password: nam # 키 암호.
+    key-alias: keystore # 키스토어 별칭.
     trust-store: /home/test/keystore.ts # 트러스트스토어 경로
-    trust-store-password: passwd # 트러스트스토어 비밀번호
+    trust-store-password: nam # 트러스트스토어 비밀번호
 ```
