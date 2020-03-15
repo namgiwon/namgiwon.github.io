@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Git 브랜치 하나만 다운로드
+title: 카카오톡 키 해쉬 등록 시 삽질 사항
 tags:
   - spring boot
   - https
