@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 스프링 부트 데이터 트랜잭션 메니저 등록
+title: 스프링 부트 데이터 트랜잭션 매니저 등록
 tags:
   - spring boot
   - dataSource
