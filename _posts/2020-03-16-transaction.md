@@ -8,6 +8,10 @@ tags:
   - TransactionManager
 ---
 
+## hiakri DB Pool 사용 전제
+
+* 근데 히카리는 일본어로 빛 광자(光)를 훈독했을 때 나는 소리가 아닌가?
+
 1. 메인 클래스에 @EnableTransactionManagement 어노테이션 선언
 
 2. 아래 클래스를 작성
