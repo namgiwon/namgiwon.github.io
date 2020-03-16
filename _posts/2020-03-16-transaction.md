@@ -8,6 +8,10 @@ tags:
   - TransactionManager
 ---
 
+1. 메인 클래스에 @EnableTransactionManagement 어노테이션 선언
+
+2. 아래 클래스를 작성
+
 ```java
 package io.floody.tr.config;
 
@@ -44,4 +48,16 @@ public class DataSourceConfig {
     }
 }
 
+```
+
+3. 설정 파일  application.yml 파일 데이터소스를 아래와 같은 형식으로 변경
+
+```bash
+datasource:
+    hikari:
+      connection-timeout: 10000
+      maximum-pool-size: 100
+      jdbc-url: jdbc:mysql://localhost:3306/floody?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+      username: root
+      password: nam
 ```
