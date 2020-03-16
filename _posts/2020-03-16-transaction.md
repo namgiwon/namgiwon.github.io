@@ -50,7 +50,7 @@ public class DataSourceConfig {
 
 ```
 
-3. 설정 파일  application.yml 파일 데이터소스를 아래와 같은 형식으로 변경
+3. 설정 파일  application.yml을 아래와 같은 형식으로 변경
 
 ```bash
 datasource:
