@@ -8,7 +8,7 @@ tags:
   - TransactionManager
 ---
 
-## hiakri DB Pool 사용 전제
+## hikari DB Pool 사용 전제
 
 * 근데 히카리는 일본어로 빛 광자(光)를 훈독했을 때 나는 소리가 아닌가?
 
