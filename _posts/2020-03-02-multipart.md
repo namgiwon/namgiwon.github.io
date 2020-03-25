@@ -3,7 +3,6 @@ layout: post
 title: ModelAttribute에 Multipart 적용 시 버그
 tags:
   - spring boot
-  - ModelAttribute
   - Multipart
 ---
 

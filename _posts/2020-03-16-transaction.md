@@ -5,7 +5,6 @@ tags:
   - spring boot
   - dataSource
   - transaction
-  - TransactionManager
 ---
 
 ## hikari DB Pool 사용 전제

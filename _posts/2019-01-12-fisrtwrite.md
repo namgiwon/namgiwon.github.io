@@ -2,7 +2,6 @@
 layout: post
 title: 블로그 여는 글
 tags:
-  - test
 ---
 
 ## 시작하며
