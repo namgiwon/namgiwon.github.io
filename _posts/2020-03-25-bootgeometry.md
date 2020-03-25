@@ -66,7 +66,7 @@ public class GeometryUtil {
 ```java
 String pointWKT = GeometryUtil.makePointWKT(geoInfo);
 Geometry geoPoint = GeometryUtil.wktToGeometry(pointWKT);
-storeRepository.savePoint(geoPoint.toString(), store.getId());
+storeRepository.saveGeoLocation(geoPoint.toString(), store.getId());
 ```
 
 * 도메인 전체를 업데이트 하는 것이 아니라 geometry 타입 컬럼 하나만 업데이트 하는 방식으로 적용함
@@ -79,6 +79,6 @@ public interface StoreRepository extends JpaRepository<Store, Long> {
     @Modifying
     @Transactional
     @Query(nativeQuery = true, value = insertPointQuery)
-    int savePoint(@Param("point") String point, @Param("id") Long id);
+    int saveGeoLocation(@Param("point") String point, @Param("id") Long id);
 }
 ```
