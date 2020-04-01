@@ -3,13 +3,12 @@ layout: post
 title: 스프링 부트 데이터 트랜잭션 매니저 등록
 tags:
   - spring boot
-  - dataSource
   - transaction
 ---
 
 ## hikari DB Pool 사용 전제
 
-* 근데 히카리는 일본어로 한자 빛 광(光)을 훈독했을 때 나는 소리인데? 일제인가?
+- 근데 히카리는 일본어로 한자 빛 광(光)을 훈독했을 때 나는 소리인데? 일제인가?
 
 1. 메인 클래스에 @EnableTransactionManagement 어노테이션 선언
 
@@ -53,7 +52,7 @@ public class DataSourceConfig {
 
 ```
 
-3. 설정 파일  application.yml을 아래와 같은 형식으로 변경
+3. 설정 파일 application.yml을 아래와 같은 형식으로 변경
 
 ```bash
 datasource:
