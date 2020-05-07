@@ -12,7 +12,7 @@ tags:
 
 - 이런 저런 시도를 해 봤으나 답이 보이지 않아 linux 2 인스턴스를 새로 생성했다.
 
-- 아래 명령어를 통햄 certbot을 설치하자.
+- 아래 명령어를 통해 certbot을 설치하자.
 
 ```bash
 curl -O http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
