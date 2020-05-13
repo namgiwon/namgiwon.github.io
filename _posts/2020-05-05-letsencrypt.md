@@ -24,12 +24,16 @@ sudo yum install certbot
 sudo certbot
 ```
 
-- 아래 명령어를 실행하여 인증서 생성. 도메인 인증을 위해 80번 포트를 이용하는 것 같으니 nginx는 잠시 내려놓자.
+1. standalone 방식으로 인증서 생성. 도메인 인증을 위해 80번 포트를 이용하는 것 같으니 nginx는 잠시 내려놓자.
 
 ```bash
-git clone https://github.com/letsencrypt/letsencrypt
-cd letsencrypt
-./letsencrypt-auto certonly --standalone -d domain.com
+sudo certbot certonly --standalone -d domain.com
+```
+
+2. webroot 방식으로 인증서 생성. 웹서버 재시작 필요 없음
+
+```bash
+sudo certbot certonly --webroot -w /usr/share/nginx/html -d domain
 ```
 
 - 위 명령어 수행하면 아래와 같은 결과가 출력됨
@@ -57,8 +61,8 @@ server {
     listen       443 default_server ssl;
     server_name  www.thankyoureward-rest-api-server.com;
 
-    ssl_certificate      /etc/letsencrypt/live/www.thankyoureward-rest-api-server.com/fullchain.pem;
-    ssl_certificate_key  /etc/letsencrypt/live/www.thankyoureward-rest-api-server.com/privkey.pem;
+    ssl_certificate      /etc/letsencrypt/live/domain/fullchain.pem;
+    ssl_certificate_key  /etc/letsencrypt/live/domain/privkey.pem;
 
     ssl_session_cache    shared:SSL:1m;
     ssl_session_timeout  5m;
