@@ -11,7 +11,7 @@ tags:
 sudo certbot renew --no-self-upgrade
 ```
 
-- 인증서를 강제 갱신.
+## 인증서를 강제 갱신.
 
 ```bash
 sudo certbot renew --force-renewal --no-self-upgrade
@@ -21,8 +21,32 @@ sudo certbot renew --force-renewal --no-self-upgrade
 
 - standalone 방식으로 인증서를 설치했을 경우 인증서를 갱신할 때 웹서버를 잠시 종료해야 함.
 
-- 인증서 삭제
+## 인증서 삭제
 
 ```bash
 sudo certbot delete --cert-name {인증서 이름}
+```
+
+## 크론탭 등록
+
+- 아래 코드를 작성하고 파일을 생성하자.
+
+```bash
+#!/bin/bash
+sudo certbot renew --force-renewal --no-self-upgrade
+sudo systemctl reload nginx
+echo "Renew cert date : $(date)"  >> /home/ec2-user/data/renew_cert.log
+```
+
+- sudo vi /etc/crontab 명령어를 실행하여 아래 항목을 추가한다.
+
+```bash
+# 매일 새벽 다섯 시, 오후 다섯 시에 인증서 갱신
+15      5,17    *       *       *       root /home/ec2-user/data/renew_cert.sh
+```
+
+- 크론탭 서비스 재시작
+
+```bash
+sudo systemctl restart crond
 ```
