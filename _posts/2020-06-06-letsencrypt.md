@@ -15,10 +15,10 @@ tags:
 IMPORTANT NOTES:
  - The following errors were reported by the server:
 
-   Domain: www.thankyoureward-rest-api-server.com
+   Domain: server.com
    Type:   connection
    Detail: Fetching
-   http://www.thankyoureward-rest-api-server.com/.well-known/acme-challenge/DnYvZ2yxlfMALl-I86mf_HbnyZBUDsHLPnb1hP5GUak:
+   http://server.com/.well-known/acme-challenge/DnYvZ2yxlfMALl-I86mf_HbnyZBUDsHLPnb1hP5GUak:
    Connection refused
 
    To fix these errors, please make sure that your domain name was
@@ -30,7 +30,7 @@ IMPORTANT NOTES:
    that you are serving files from the webroot path you provided.
 ```
 
-- certbot에서 인증서 업데이트를 위해 nginx의 webroot에 특정한 파일을 만들고 커넥션 체크를 하는 것 같은데 (http://www.thankyoureward-rest-api-server.com/.well-known/acme-challenge/DnYvZ2yxlfMALl-I86mf_HbnyZBUDsHLPnb1hP5GUak), 여기에 접속이 안되니 에러가 발생하는 것으로 파악.
+- certbot에서 인증서 업데이트를 위해 nginx의 webroot에 특정한 파일을 만들고 커넥션 체크를 하는 것 같은데 (http:/server.com/.well-known/acme-challenge/DnYvZ2yxlfMALl-I86mf_HbnyZBUDsHLPnb1hP5GUak), 여기에 접속이 안되니 에러가 발생하는 것으로 파악.
 
 - nginx의 설정을 조금 수정함.
 
