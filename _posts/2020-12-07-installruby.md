@@ -19,3 +19,9 @@ rbenv global 2.7.2
 gem install bundler
 gem install rails
 ```
+
+- gem을 통해 mysql2 모듈을 설치하기 위해서는 아래 패키지를 먼저 설치해야 함
+
+```bash
+sudo yum install mysql-devel
+```
